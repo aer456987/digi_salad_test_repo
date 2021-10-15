@@ -1,0 +1,37 @@
+@each $name, $color in $color-lists
+  // $temp-color: darken($color, 10)
+
+  .text-#{$name}
+    color: $color
+
+  .bg-#{$name}
+    background: $color
+
+  .btn-#{$name}
+    +block-style($color)
+
+$space-num: 1
+$space-size: 2
+@while $space-num <= 50
+  // .m-#{$space-num}
+  //   margin: ( $space-size * $space-num ) + px
+  // .mt-#{$space-num}
+  //   margin-top: ( $space-size * $space-num ) + px
+  .mb-#{$space-num}
+    margin-bottom: ( $space-size * $space-num ) + px
+  // .ms-#{$space-num}
+  //   margin-left: ( $space-size * $space-num ) + px
+  // .me-#{$space-num}
+  //   margin-right: ( $space-size * $space-num ) + px
+  .mb-md-#{$space-num}
+    +pad
+      margin-bottom: ( $space-size * $space-num ) + px !important
+
+  .mb-sm-#{$space-num}
+    +moblie
+      margin-bottom: ( $space-size * $space-num ) + px !important
+  $space-num: $space-num + 1
+
+@each $name, $size in $round-size
+  .round-#{$name}
+    border-radius: $size

@@ -1,0 +1,48 @@
+.awards
+  display: flex
+  justify-content: end
+
+  &__content
+    width: 85%
+    display: flex
+    align-items: center
+    padding-top: 65px
+    padding-bottom: 80px
+    padding-left: 65px
+    border-radius: $round-lg 0 $round-lg $round-lg
+    background: $white
+    z-index: 1
+    +pad
+      width: 90%
+      padding: 60px
+      flex-wrap: wrap
+    +moblie
+      width: 95%
+      padding-left: 30px
+      padding-right: 30px
+      border-radius: $round
+
+
+  &__text
+    width: 30%
+    +pad
+      width: 100%
+      margin-bottom: 20px
+    p
+      font-size: 16px
+      line-height: 1.75
+
+  &__lists
+    width: 40%
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    margin-left: 3%
+    +pad
+      width: 100%
+      margin: 0
+
+  &__lists__item
+    width: 48%
+    +moblie
+      display: inlien-block

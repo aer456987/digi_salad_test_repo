@@ -1,0 +1,118 @@
+.projects
+  color: $white
+  padding: 194px 0 261px
+  border-radius: 0 0 $round-lg $round-lg
+  margin-bottom: 90px
+  background-position: center center
+  background-size: cover
+  background-repeat: no-repeat
+  background-attachment: fixed
+  +pad
+    border-radius: 0 0 $round-lg $round-lg
+    padding: 120px 0
+    margin-bottom: 70px
+  +moblie
+    margin-bottom: 40px
+    padding: 60px 0
+    border-radius: 0 0 $round $round
+
+  &__container
+    max-width: 1300px
+    margin: 0 auto
+    padding: 0 30px
+
+  &__content
+    position: relative
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 0 100px
+    +pad
+      flex-wrap: wrap
+      justify-content: center
+    +moblie
+      padding-left: 40px
+      padding-right: 40px
+  &__imgs
+    width: 50%
+    position: relative
+    +pad
+      width: 90%
+    &__img
+      border-radius: $round-md
+      overflow: hidden
+      img
+        +pad
+          width: 100%
+
+  &__text__content
+    width: 45%
+    transform: translateY(-15px)
+    +pad
+      width: 100%
+      transform: translateY(0)
+      padding-top: 60px
+    +moblie
+      text-align: center
+      padding-top: 40px
+
+  &__title
+    font-size: $h2-font-size
+    letter-spacing: 3.64px
+    margin-bottom: 40px
+    +moblie
+      font-size: $h3-font-size
+  &__subtitle
+    display: block
+    font-size: $h5-font-size
+    letter-spacing: 2.22px
+    margin-bottom: 20px
+  &__text
+    font-size: $h5-font-size
+    line-height: 1.5
+
+  &__btn
+    position: absolute
+    bottom: 0
+    right: 0
+    transform: translate(30%, 60%)
+    padding: 60px 33px !important
+    +pad
+      position: relative
+      width: 60%
+      left: 50%
+      transform: translate(-50%, 0%)
+      margin-top: 30px
+      padding: 40px 23px !important
+    +moblie
+      width: 100%
+      padding: 30px 15px !important
+
+  &__navigation
+    position: absolute
+    width: 53px
+    height: 53px
+    border: 0
+    border-radius: 100%
+    font-size: $h5-font-size
+    color: $white
+    background: $primary
+    cursor: pointer
+    +moblie
+      width: 35px
+      height: 35px
+
+    &__start, &__end
+      top: 50%
+      transform: translateY(-50%)
+      &::before
+        font-size: $h3-font-size
+    &__start
+      left: 0
+      &::before
+        content: '❮'
+    &__end
+      right: 0
+      &::before
+        content: '❯'
+        transform: rotate(90deg)

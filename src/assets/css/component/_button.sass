@@ -1,0 +1,16 @@
+.btn
+  padding: 12px 10px
+  border: none
+  font-size: $h6-font-size
+  color: $white
+  background-color: transparent
+  cursor: pointer
+
+.btn--gradual
+  font-weight: 700
+  letter-spacing: 1.14px
+  background: linear-gradient(to right, $info, $green-light)
+  transition-duration: .5s
+  &:hover
+    background: linear-gradient(to right, darken($info, 10), darken($green-light, 10))
+    transition-duration: .5s

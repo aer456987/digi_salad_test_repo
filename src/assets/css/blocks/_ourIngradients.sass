@@ -1,0 +1,52 @@
+.ourIngradients
+  position: relative
+  margin-top: -200px
+  padding-top: 320px
+  padding-bottom: 433px
+  border-radius: $round-lg
+  background: $primary
+  +pad
+    padding-top: 250px
+    padding-bottom: 350px
+  +moblie
+    padding-bottom: 320px
+    border-radius: $round
+
+  &__container
+    max-width: 1135px
+    margin: 0 auto
+    padding: 0 30px
+  &__content
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+  &__text
+    max-width: 1007px
+    font-size: $h5-font-size
+    line-height: 1.75
+    text-align: center
+  &__more__link
+    position: relative
+    font-size: $h4-font-size
+    font-weight: 700
+    letter-spacing: 2px
+    color: $white
+    transition-duration: .3s
+    z-index: 1
+
+    &::before
+      content: ''
+      position: absolute
+      width: 103%
+      height: 10px
+      left: 50%
+      bottom: 0
+      transform: translateX(-50%)
+      z-index: -1
+      background: $secondary
+    &:hover
+      color: darken($primary, 20)
+      transition-duration: .3s
+      &::before
+        background: rgba($white, .8)
